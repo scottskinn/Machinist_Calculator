@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import "./styles.css"
 
 
+
 function CuttingSpeed() {
   const [diameter, setDiameter] = useState('');
   const [spindleSpeed, setSpindleSpeed] = useState('');

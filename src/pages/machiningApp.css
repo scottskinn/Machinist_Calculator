@@ -25,6 +25,14 @@
   color: #4caf50;
 }
 
+.links.active {
+  background-color: #4caf50;
+}
+
+.links.active:hover {
+  background-color: #45a049;
+}
+
 /* Add the following styles for the dark theme */
 body {
   background-color: #111;
