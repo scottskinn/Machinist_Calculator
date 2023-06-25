@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import "./styles.css"
 
 function FeedRatesPage() {
   const [feedRate, setFeedRate] = useState('');
@@ -13,7 +14,7 @@ function FeedRatesPage() {
   };
 
   return (
-    <div>
+    <div className='FeedRatesPage'>
       <h2>Feed Rates Page</h2>
       <div>
         <label htmlFor="feedRate">Feed Rate:</label>

@@ -15,7 +15,7 @@ function CuttingSpeed() {
   };
 
   return (
-    <div className='.cuttingSpeedPage'>
+    <div className='cuttingSpeedPage'>
       <h2>Cutting Speed Page</h2>
       <div>
         <label htmlFor="diameter">Diameter:</label>

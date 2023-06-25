@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import "./styles.css";
 
 function RPMPage() {
   const [cuttingSpeed, setCuttingSpeed] = useState('');
@@ -13,7 +14,7 @@ function RPMPage() {
   };
 
   return (
-    <div>
+    <div className='RPMPage'>
       <h2>RPM Page</h2>
       <div>
         <label htmlFor="cuttingSpeed">Cutting Speed:</label>

@@ -1,0 +1,25 @@
+.IPTPage {
+    margin-bottom: 20px;
+}
+
+.IPTPage label {
+    font-weight: bold;
+}
+
+.IPTPage input {
+    margin-bottom: 10px;
+    padding: 5px;
+    width: 200px;
+}
+
+.IPTPage button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.IPTPage button:hover {
+    background-color: #45a049;
+}

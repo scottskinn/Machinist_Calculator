@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import "./styles.css"
 
 function IPTPage() {
   const [feedRate, setFeedRate] = useState('');
@@ -14,7 +15,7 @@ function IPTPage() {
   };
 
   return (
-    <div>
+    <div className='IPTPage'>
       <h2>IPT Page</h2>
       <p> (IPM / RPM) / Z</p>
       <div>
