@@ -1,0 +1,26 @@
+.cuttingSpeedPage {
+    margin-bottom: 20px;
+  }
+  
+  .cuttingSpeedPage label {
+    font-weight: bold;
+  }
+  
+  .cuttingSpeedPage input {
+    margin-bottom: 10px;
+    padding: 5px;
+    width: 200px;
+  }
+  
+  .cuttingSpeedPage button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .cuttingSpeedPage button:hover {
+    background-color: #45a049;
+  }
+  

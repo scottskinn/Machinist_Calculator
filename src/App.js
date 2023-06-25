@@ -1,24 +1,24 @@
-import logo from './logo.svg';
+import { Routes, Route, BrowserRouter } from "react-router-dom";
+import MachiningApp from "./pages/machiningApp";
+import CuttingSpeed from "./pages/cutting-speed";
+import FeedRate from "./pages/feed-rates";
+import RPM from "./pages/rpm";
+import IPT from "./pages/ipt";
 import './App.css';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<MachiningApp />}>
+          <Route path="cutting-speed" element={<CuttingSpeed />} />
+          <Route path="feed-rates" element={<FeedRate />} />
+          <Route path="rpm" element={<RPM />} />
+          <Route path="ipt" element={<IPT />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
