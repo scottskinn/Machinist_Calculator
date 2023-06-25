@@ -1,26 +1,34 @@
-.cuttingSpeedPage {
-    margin-bottom: 20px;
-  }
-  
-  .cuttingSpeedPage label {
-    font-weight: bold;
-  }
-  
-  .cuttingSpeedPage input {
-    margin-bottom: 10px;
-    padding: 5px;
-    width: 200px;
-  }
-  
-  .cuttingSpeedPage button {
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .cuttingSpeedPage button:hover {
-    background-color: #45a049;
-  }
-  
+.CuttingSpeedPage {
+  margin-bottom: 20px;
+}
+
+.CuttingSpeedPage label {
+  font-weight: bold;
+  color: #fff;
+}
+
+.CuttingSpeedPage input {
+  margin-bottom: 10px;
+  padding: 5px;
+  width: 200px;
+  color: #fff;
+  background-color: #333;
+  border: none;
+}
+
+.CuttingSpeedPage button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.CuttingSpeedPage button:hover {
+  background-color: #45a049;
+}
+
+.CuttingSpeedPage h2,
+.CuttingSpeedPage h3 {
+  color: #fff;
+}
