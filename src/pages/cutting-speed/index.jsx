@@ -1,51 +1,63 @@
 import React, { useState } from 'react';
 import "./styles.css"
 
-
-
-function CuttingSpeed() {
+const CuttingSpeedPage = () => {
+  const [unit, setUnit] = useState('imperial');
   const [diameter, setDiameter] = useState('');
   const [spindleSpeed, setSpindleSpeed] = useState('');
   const [cuttingSpeed, setCuttingSpeed] = useState('');
 
-  const calculateCuttingSpeed = () => {
-    // Perform cutting speed calculation based on the provided inputs
-    const calculatedCuttingSpeed = (3.14 * parseFloat(diameter) * parseFloat(spindleSpeed)).toFixed(2);
+  const handleUnitChange = (e) => {
+    setUnit(e.target.value);
+  };
+
+  const handleCalculation = () => {
+    // Perform cutting speed calculation based on the selected unit
+    let calculatedCuttingSpeed;
+
+    if (unit === 'imperial') {
+      calculatedCuttingSpeed = calculateCuttingSpeed(parseFloat(diameter), parseFloat(spindleSpeed));
+    } else {
+      calculatedCuttingSpeed = calculateCuttingSpeed(convertToMetric(parseFloat(diameter)), convertToMetric(parseFloat(spindleSpeed)));
+    }
 
     setCuttingSpeed(calculatedCuttingSpeed);
   };
 
+  const calculateCuttingSpeed = (diameter, spindleSpeed) => {
+    // Calculate cutting speed based on the selected unit
+    let cuttingSpeed;
+
+    if (unit === 'imperial') {
+      cuttingSpeed = (3.14 * diameter * spindleSpeed).toFixed(2);
+    } else {
+      cuttingSpeed = (3.98 * diameter * spindleSpeed).toFixed(2);
+    }
+
+    return cuttingSpeed;
+  };
+
+  const convertToMetric = (value) => {
+    // Convert value from imperial to metric
+    // Implement your conversion logic here
+    return value; // Placeholder, replace with actual conversion logic
+  };
+
   return (
-    <div className='CuttingSpeedPage'>
-      <h2>Cutting Speed Page</h2>
-      <div>
-        <label htmlFor="diameter">Diameter:</label>
-        <input
-          type="text"
-          id="diameter"
-          value={diameter}
-          onChange={(e) => setDiameter(e.target.value)}
-        />
+    <div className="cutting-speed-page">
+      <h2>Cutting Speed</h2>
+
+      <div className="form-group">
+        <label htmlFor="unit">Select Unit:</label>
+        <select id="unit" value={unit} onChange={handleUnitChange}>
+          <option value="imperial">Imperial</option>
+          <option value="metric">Metric</option>
+        </select>
       </div>
-      <div>
-        <label htmlFor="spindleSpeed">Spindle Speed:</label>
-        <input
-          type="text"
-          id="spindleSpeed"
-          value={spindleSpeed}
-          onChange={(e) => setSpindleSpeed(e.target.value)}
-        />
-      </div>
-      <div>
-        <button onClick={calculateCuttingSpeed}>Calculate Cutting Speed</button>
-      </div>
-      {cuttingSpeed && (
-        <div>
-          <h3>Cutting Speed: {cuttingSpeed} inches/minute</h3>
-        </div>
-      )}
+
+      {/* Rest of the form inputs and calculation logic */}
     </div>
   );
-}
+};
 
-export default CuttingSpeed;
+export default CuttingSpeedPage;
