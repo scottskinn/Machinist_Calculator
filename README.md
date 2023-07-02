@@ -1,70 +1,43 @@
-# Getting Started with Create React App
+# Machininst Calculator
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description
 
-## Available Scripts
+The app I am developing is a comprehensive machining toolkit designed to assist machinists in their day-to-day operations. It offers a range of essential features and tools to streamline machining processes and improve efficiency. The app provides quick access to a database of cutting speeds, feeds, and recommended parameters for various materials, allowing machinists to make informed decisions while setting up their machines. Additionally, it includes a toolbox with essential calculators for speeds and feeds, thread measurements, tolerances, and conversions, eliminating the need for manual calculations. With a user-friendly interface and real-time updates, this app aims to be an indispensable companion for machinists, empowering them to optimize their machining operations and enhance productivity.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- Cutting Speed Calculation: Calculate the cutting speed based on the selected operation (milling, drilling, or lathe), unit (imperial or metric), diameter, and spindle speed.
+- Feed Rates Calculation: Calculate the feed rates based on the selected unit, spindle speed, and number of teeth.
+- RPM Calculation: Calculate the RPM (Revolutions Per Minute) based on the selected unit, cutting speed, and diameter.
+- IPT (Inches Per Tooth) Calculation: Calculate the IPT based on the selected unit, feed rate, and spindle speed.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Getting Started
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. Clone the repository: `git clone git@github.com:scottskinn/Machinist_Calculator.git`
+2. Install the dependencies: `npm install`
+3. Start the development server: `npm start`
 
-### `npm test`
+## Technologies Used
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- React: JavaScript library for building user interfaces
+- React Router: Library for routing within a React application
 
-### `npm run build`
+## Project Structure
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The project structure is as follows:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- `src/`: Contains the source code of the app.
+  - `components/`: Contains the individual page components.
+  - `pages/`: Contains the main page components.
+  - `styles/`: Contains the CSS styles for the app.
+- `public/`: Contains the public assets (HTML, images, etc.).
+- `App.js`: The main entry point of the application.
+- `index.js`: Renders the app into the DOM.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Contributing
 
-### `npm run eject`
+Contributions are welcome! If you have any ideas, suggestions, or bug reports, please open an issue or submit a pull request.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## License
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is licensed under the [MIT License](LICENSE).
