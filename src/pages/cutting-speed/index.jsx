@@ -144,7 +144,7 @@ const CuttingSpeedPage = () => {
           {unit === 'imperial' ? (
             <label htmlFor="calculatedSpindleSpeed">Calculated Spindle Speed (RPM):</label>
           ) : (
-            <label htmlFor="calculatedSpindleSpeed">Calculated Spindle Speed (mm/min):</label>
+            <label htmlFor="calculatedSpindleSpeed">Calculated Spindle Speed (RPM):</label>
           )}
           <input
             type="text"
