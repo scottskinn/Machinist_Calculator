@@ -4,8 +4,8 @@ import './styles.css';
 const CuttingSpeedPage = () => {
   const [unit, setUnit] = useState('imperial');
   const [diameter, setDiameter] = useState('');
+  const [material, setMaterial] = useState('steel');
   const [cuttingTool, setCuttingTool] = useState('hss');
-  const [material, setMaterial] = useState('steel'); // Add a default material
   const [cuttingSpeed, setCuttingSpeed] = useState('');
 
   const handleUnitChange = (e) => {
@@ -21,7 +21,6 @@ const CuttingSpeedPage = () => {
   };
 
   const handleCalculation = () => {
-    // Perform cutting speed calculation based on the selected unit, material, and cutting tool
     let calculatedCuttingSpeed;
 
     if (unit === 'imperial') {
@@ -34,40 +33,41 @@ const CuttingSpeedPage = () => {
   };
 
   const calculateCuttingSpeed = (diameter, material) => {
-    // Calculate cutting speed based on the selected unit, material, and cutting tool
     let cuttingSpeed;
-    let materialFactor = getMaterialFactor(material);
 
     if (unit === 'imperial') {
-      cuttingSpeed = (materialFactor * Math.pow(diameter, 0.5)).toFixed(2);
+      cuttingSpeed = (getMaterialFactor(material) * Math.pow(diameter, 0.5)).toFixed(2);
     } else {
-      cuttingSpeed = (materialFactor * Math.pow(convertToMetric(diameter), 0.5)).toFixed(2);
+      cuttingSpeed = (getMaterialFactor(material) * Math.pow(convertToImperial(diameter), 0.5)).toFixed(2);
     }
 
     return cuttingSpeed;
   };
 
   const calculateSpindleSpeed = () => {
-    // Calculate spindle speed based on cutting speed, diameter, and unit
     let spindleSpeed;
 
     if (unit === 'imperial') {
       spindleSpeed = (cuttingSpeed / (3.14 * diameter)).toFixed(2);
     } else {
-      spindleSpeed = (cuttingSpeed / (10 * 3.14 * convertToMetric(diameter))).toFixed(2);
+      spindleSpeed = (cuttingSpeed / (3.14 * convertToMetric(diameter))).toFixed(2);
     }
 
     return spindleSpeed;
   };
 
   const convertToMetric = (value) => {
-    // Convert value from imperial to metric
-    const convertedValue = value * 25.4; // Multiply by 25.4 to convert inches to millimeters
+    const convertedValue = value / 25.4;
 
-    return convertedValue.toFixed(2); // Return the converted value rounded to 2 decimal places
+    return convertedValue.toFixed(2);
   };
 
-  
+  const convertToImperial = (value) => {
+    const convertedValue = value * 25.4;
+
+    return convertedValue.toFixed(2);
+  };
+
   const getMaterialFactor = (material) => {
     let materialFactor;
 
@@ -88,7 +88,7 @@ const CuttingSpeedPage = () => {
       materialFactor *= 1.2;
     } else if (cuttingTool === 'carbide') {
       // Carbide material factor adjustment
-      materialFactor *= 1.5;
+      materialFactor *= 2.5;
     }
 
     return materialFactor;
@@ -111,6 +111,7 @@ const CuttingSpeedPage = () => {
         <select id="material" value={material} onChange={handleMaterialChange}>
           <option value="steel">Steel</option>
           <option value="aluminum">Aluminum</option>
+          {/* Add more material options as needed */}
         </select>
       </div>
 
@@ -119,6 +120,7 @@ const CuttingSpeedPage = () => {
         <select id="cuttingTool" value={cuttingTool} onChange={handleCuttingToolChange}>
           <option value="hss">High-Speed Steel (HSS)</option>
           <option value="carbide">Carbide</option>
+          {/* Add more cutting tool options as needed */}
         </select>
       </div>
 
@@ -157,4 +159,3 @@ const CuttingSpeedPage = () => {
 };
 
 export default CuttingSpeedPage;
-
