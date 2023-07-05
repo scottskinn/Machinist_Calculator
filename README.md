@@ -1,8 +1,12 @@
-# Machininst Calculator
+# Machinist Calculator
 
 ## Description
 
 The app I am developing is a comprehensive machining toolkit designed to assist machinists in their day-to-day operations. It offers a range of essential features and tools to streamline machining processes and improve efficiency. The app provides quick access to a database of cutting speeds, feeds, and recommended parameters for various materials, allowing machinists to make informed decisions while setting up their machines. Additionally, it includes a toolbox with essential calculators for speeds and feeds, thread measurements, tolerances, and conversions, eliminating the need for manual calculations. With a user-friendly interface and real-time updates, this app aims to be an indispensable companion for machinists, empowering them to optimize their machining operations and enhance productivity.
+
+## Live site
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/cbf42bcf-23f4-458e-bc4a-c43e8c49e96c/deploy-status)](https://app.netlify.com/sites/machinist-calculator/deploys)
 
 ## Features
 
