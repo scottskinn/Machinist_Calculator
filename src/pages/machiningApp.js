@@ -14,16 +14,16 @@ const MachiningApp = () => {
       <nav className="nav">
         <ul>
           <li>
-            <Link className={`links ${location.pathname === '/' ? 'active' : ''}`} to="/cutting-speed">Cutting Speed</Link>
+            <Link className={`links ${location.pathname === '/cutting-speed' ? 'active' : ''}`} to="./cutting-speed">Cutting Speed</Link>
           </li>
           <li>
-            <Link className={`links ${location.pathname === '/feed-rates' ? 'active' : ''}`} to="/feed-rates">Feed Rates</Link>
+            <Link className={`links ${location.pathname === '/feed-rates' ? 'active' : ''}`} to="./feed-rates">Feed Rates</Link>
           </li>
           <li>
-            <Link className={`links ${location.pathname === '/rpm' ? 'active' : ''}`} to="/rpm">RPM</Link>
+            <Link className={`links ${location.pathname === '/rpm' ? 'active' : ''}`} to="./rpm">RPM</Link>
           </li>
           <li>
-            <Link className={`links ${location.pathname === '/ipt' ? 'active' : ''}`} to="/ipt">IPT</Link>
+            <Link className={`links ${location.pathname === '/ipt' ? 'active' : ''}`} to="./inchPerTooth">IPT</Link>
           </li>
         </ul>
       </nav>

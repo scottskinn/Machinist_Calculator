@@ -11,11 +11,11 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<MachiningApp />}>
+        <Route path="machiningApp" element={<MachiningApp />}>
           <Route path="cutting-speed" element={<CuttingSpeed />} />
           <Route path="feed-rates" element={<FeedRate />} />
           <Route path="rpm" element={<RPM />} />
-          <Route path="ipt" element={<IPT />} />
+          <Route path="inchPerTooth" element={<IPT />} />
         </Route>
       </Routes>
     </BrowserRouter>
