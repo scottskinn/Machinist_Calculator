@@ -3,7 +3,7 @@ import MachiningApp from "./pages/machiningApp";
 import CuttingSpeed from "./pages/cutting-speed";
 import FeedRate from "./pages/feed-rates";
 import RPM from "./pages/rpm";
-import IPT from "./pages/ipt";
+import IPT from "./pages/inchPerTooth";
 import './App.css';
 
 
