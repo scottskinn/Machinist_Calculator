@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, useLocation, Outlet } from 'react-router-dom';
 import './machiningApp.css';
 
 const MachiningApp = () => {
     const location = useLocation();
+    const [showConversionTable, setShowConversionTable] = useState(true);
 
     // Function to convert value from imperial to metric
     const convertToMetric = (value) => {
@@ -38,49 +39,80 @@ const MachiningApp = () => {
         numerator++;
     }
 
+    const handleLinkClick = () => {
+        setShowConversionTable(false);
+    };
 
     return (
         <div className="home">
             <h1>
-                <Link className="title" to="/machiningApp">Machinist App</Link>
+                <Link className="title" to="/" onClick={() => setShowConversionTable(true)}>
+                    Machinist App
+                </Link>
             </h1>
 
             <nav className="nav">
                 <ul>
                     <li>
-                        <Link className={`links ${location.pathname === '/cutting-speed' ? 'active' : ''}`} to="/cutting-speed">Cutting Speed</Link>
+                        <Link
+                            className={`links ${location.pathname === '/cutting-speed' ? 'active' : ''}`}
+                            to="/cutting-speed"
+                            onClick={handleLinkClick}
+                        >
+                            Cutting Speed
+                        </Link>
                     </li>
                     <li>
-                        <Link className={`links ${location.pathname === '/feed-rates' ? 'active' : ''}`} to="/feed-rates">Feed Rates</Link>
+                        <Link
+                            className={`links ${location.pathname === '/feed-rates' ? 'active' : ''}`}
+                            to="/feed-rates"
+                            onClick={handleLinkClick}
+                        >
+                            Feed Rates
+                        </Link>
                     </li>
                     <li>
-                        <Link className={`links ${location.pathname === '/rpm' ? 'active' : ''}`} to="/rpm">RPM</Link>
+                        <Link
+                            className={`links ${location.pathname === '/rpm' ? 'active' : ''}`}
+                            to="/rpm"
+                            onClick={handleLinkClick}
+                        >
+                            RPM
+                        </Link>
                     </li>
                     <li>
-                        <Link className={`links ${location.pathname === '/ipt' ? 'active' : ''}`} to="/inchPerTooth">IPT</Link>
+                        <Link
+                            className={`links ${location.pathname === '/inchPerTooth' ? 'active' : ''}`}
+                            to="/inchPerTooth"
+                            onClick={handleLinkClick}
+                        >
+                            IPT
+                        </Link>
                     </li>
                 </ul>
             </nav>
 
-            <div className="conversion-table">
-                <h2>Conversion Table</h2>
-                <table>
-                    <colgroup>
-                        <col className="column" />
-                        <col className="column" />
-                        <col className="column" />
-                        <col className="column" />
-                    </colgroup>
-                    <thead>
-                        <tr>
-                            <th>Fraction</th>
-                            <th>Imperial</th>
-                            <th>Metric</th>
-                        </tr>
-                    </thead>
-                    <tbody>{conversionTable}</tbody>
-                </table>
-            </div>
+            {showConversionTable && (
+                <div className="conversion-table">
+                    <h2>Conversion Table</h2>
+                    <table>
+                        <colgroup>
+                            <col className="column" />
+                            <col className="column" />
+                            <col className="column" />
+                            <col className="column" />
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>Fraction</th>
+                                <th>Imperial</th>
+                                <th>Metric</th>
+                            </tr>
+                        </thead>
+                        <tbody>{conversionTable}</tbody>
+                    </table>
+                </div>
+            )}
 
             <Outlet />
         </div>
