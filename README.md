@@ -21,6 +21,8 @@ The app I am developing is a comprehensive machining toolkit designed to assist 
 2. Install the dependencies: `npm install`
 3. Start the development server: `npm start`
 
+![Feeds & Speeds](./public/images/Machin-cal.jpg)
+
 ## Technologies Used
 
 - React: JavaScript library for building user interfaces
@@ -31,7 +33,6 @@ The app I am developing is a comprehensive machining toolkit designed to assist 
 The project structure is as follows:
 
 - `src/`: Contains the source code of the app.
-  - `components/`: Contains the individual page components.
   - `pages/`: Contains the main page components.
   - `styles/`: Contains the CSS styles for the app.
 - `public/`: Contains the public assets (HTML, images, etc.).
