@@ -46,3 +46,7 @@ Contributions are welcome! If you have any ideas, suggestions, or bug reports, p
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
+
+## Attributes
+
+<a href="https://www.flaticon.com/free-icons/drill" title="drill icons">Drill icons created by Smashicons - Flaticon</a>

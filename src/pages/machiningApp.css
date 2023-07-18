@@ -29,6 +29,12 @@ html {
 
 .nav {
   margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.nav ul li {
+  list-style: none;
+  padding: .25rem;
 }
 
 .links {
@@ -36,6 +42,8 @@ html {
   margin-right: 10px;
   color: #fff;
   text-decoration: none;
+  padding: 2px;
+  text-transform: uppercase;
 }
 
 .links:hover {
@@ -43,7 +51,10 @@ html {
 }
 
 .links.active {
-  background-color: #4caf50;
+  background-color: #FFFFFF;
+  color: #000000;
+  border: 2px solid green;
+  border-radius: 2px;
 }
 
 .links.active:hover {
