@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import "./styles.css";
 
+import CuttingSpeedTable from '../components/cuttingSpeedTable/cuttingSpeedTable';
+
 function RPMPage() {
   const [cuttingSpeed, setCuttingSpeed] = useState('');
   const [diameter, setDiameter] = useState('');
@@ -14,35 +16,41 @@ function RPMPage() {
   };
 
   return (
-    <div className='RPMPage'>
-      <h2>RPM Page</h2>
-      <div>
-        <label htmlFor="cuttingSpeed">Cutting Speed:</label>
-        <input
-          type="text"
-          id="cuttingSpeed"
-          value={cuttingSpeed}
-          onChange={(e) => setCuttingSpeed(e.target.value)}
-        />
-      </div>
-      <div>
-        <label htmlFor="diameter">Diameter:</label>
-        <input
-          type="text"
-          id="diameter"
-          value={diameter}
-          onChange={(e) => setDiameter(e.target.value)}
-        />
-      </div>
-      <div>
-        <button onClick={calculateSpindleSpeed}>Calculate Spindle Speed</button>
-      </div>
-      {spindleSpeed && (
+    <>
+      <div className='RPMPage'>
+        <h2>RPM Page</h2>
         <div>
-          <h3>Spindle Speed: {spindleSpeed} RPM</h3>
+          <label htmlFor="cuttingSpeed">Cutting Speed:</label>
+          <input
+            type="text"
+            id="cuttingSpeed"
+            value={cuttingSpeed}
+            onChange={(e) => setCuttingSpeed(e.target.value)}
+          />
         </div>
-      )}
-    </div>
+        <div>
+          <label htmlFor="diameter">Diameter:</label>
+          <input
+            type="text"
+            id="diameter"
+            value={diameter}
+            onChange={(e) => setDiameter(e.target.value)}
+          />
+        </div>
+        <div>
+          <button onClick={calculateSpindleSpeed}>Calculate Spindle Speed</button>
+        </div>
+        {spindleSpeed && (
+          <div>
+            <h3>Spindle Speed: {spindleSpeed} RPM</h3>
+          </div>
+        )}
+
+      </div>
+      <div>
+        <CuttingSpeedTable />
+      </div>
+    </>
   );
 }
 

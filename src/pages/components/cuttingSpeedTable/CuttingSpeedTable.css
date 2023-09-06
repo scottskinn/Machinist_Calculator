@@ -1,0 +1,57 @@
+/* CuttingSpeedTable.css */
+.title {
+  margin: 15px 0;
+}
+
+.cutting-speed-table {
+  display: grid;
+  table-layout: fixed;
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  /* background-color: #fff; */
+}
+
+.operation-buttons {
+  margin-bottom: 20px;
+}
+
+.operation-buttons button {
+  margin-right: 10px;
+  padding: 8px 16px;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+}
+
+.operation-buttons button.active {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.cut-speed-table table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.cutting-speed-table table th,
+.cutting-speed-table table td {
+  padding: 8px;
+  text-align: center;
+  border: 1px solid white;
+}
+
+.cutting-speed-table th {
+  /* background-color: #f0f0f0; */
+  font-weight: bold;
+}
+
+.cutting-speed-table tr {
+  /* background-color: #f5f5f5; */
+  border: 1px solid white;
+}
+
+.cutting-speed-table tbody tr:hover {
+  background-color: gray;
+}
