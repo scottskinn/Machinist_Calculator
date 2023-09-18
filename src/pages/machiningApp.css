@@ -10,22 +10,29 @@ body,
 html {
   font-family: "Roboto Mono", monospace;
   font-size: 100%;
-  background-color: #222;
+  /* background-color: #222; */
   min-height: 100vh;
-  min-with: 100vw;
+  min-width: 100vw;
 }
 
 /* Main styles */
 .home {
-  background-color: #222;
-  color: #fff;
+  /* background-color: #222; */
+  /* color: #fff; */
   padding: 20px;
   text-align: center;
 }
 
+h2 {
+  font-size: 18px;
+}
+
 .title {
-  color: #fff;
   text-decoration: none;
+}
+
+.title:visited {
+  color: blue;
 }
 
 .nav {
@@ -41,7 +48,7 @@ html {
 .links {
   display: inline-block;
   margin-right: 10px;
-  color: #fff;
+  /* color: #fff; */
   text-decoration: none;
   padding: 2px 5px;
   text-transform: uppercase;
@@ -49,6 +56,10 @@ html {
 
 .links:hover {
   color: #4caf50;
+}
+
+.links:visited {
+  color: blue;
 }
 
 .links.active {
@@ -113,10 +124,6 @@ button:hover {
 
 .result {
   margin-top: 20px;
-}
-
-h2 {
-  font-size: 18px;
 }
 
 /* Table styles */

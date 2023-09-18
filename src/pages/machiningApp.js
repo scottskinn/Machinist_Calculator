@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useLocation, Outlet } from 'react-router-dom';
 import './machiningApp.css';
+import { DarkModeToggle } from '../themes/toggleDark';
 
 const MachiningApp = () => {
     const location = useLocation();
@@ -50,6 +51,8 @@ const MachiningApp = () => {
                     Machinist App
                 </Link>
             </h1>
+
+            <DarkModeToggle />
 
             <nav className="nav">
                 <ul>

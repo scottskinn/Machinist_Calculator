@@ -1,3 +1,21 @@
+body {
+  --color-background: #a6a6a6;
+  --color-foreground: #1f2023;
+  color: black;
+}
+
+body.dark {
+  --color-background: #1f2023;
+  --color-foreground: #a6a6a6;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+  --color-background: #1f2023;
+  --color-foreground: #a6a6a6;
+  }
+}
+
 .App {
   text-align: center;
 }
@@ -14,14 +32,14 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: var(--color-background);
+  color: var(--color-foreground);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
 }
 
 .App-link {

@@ -6,7 +6,6 @@ import RPM from "./pages/rpm";
 import IPT from "./pages/inchPerTooth";
 import './App.css';
 
-
 function App() {
   return (
     <BrowserRouter>
