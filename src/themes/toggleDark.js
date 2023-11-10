@@ -11,7 +11,6 @@ export const DarkModeToggle = () => {
     setIsDark(!isDark);
   };
 
-  // Write the function that will make the toggle slide when clicked ?
   return (
     <div className="toggle-container">
       <Toggle
@@ -19,6 +18,13 @@ export const DarkModeToggle = () => {
         id="toggle"
         checked={isDark}
         onChange={handleToggleChange}
+        aria-label="Dark mode toggle"
+        />
+      <label htmlFor="toggle"></label>
+    </div>
+  );
+};
+
         // icons={{
         //   checked: (
         //     <span role="img" aria-label="Dark mode icon">
@@ -31,9 +37,3 @@ export const DarkModeToggle = () => {
         //     </span>
         //   ),
         // }}
-        aria-label="Dark mode toggle"
-      />
-      <label htmlFor="toggle"></label>
-    </div>
-  );
-};

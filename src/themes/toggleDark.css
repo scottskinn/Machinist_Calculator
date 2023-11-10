@@ -34,6 +34,7 @@
   bottom: 0;
   background-color: #fff;
   transition: transform 0.2s, background-color 0.2s;
+  transform: translateX(26px);
   border-radius: 17px;
 }
 
@@ -47,18 +48,17 @@
   background-color: #333;
   border-radius: 50%;
   transition: transform 0.2s, background-color 0.2s;
-  transform: translateX(0); /* Initially, the slider is on the left (sun) */
-  right: 4px;
+  /* transform: translateX(0);  */
   bottom: 4px;
 }
 
 input:checked + .slider {
   background-color: #333; /* Set the background color for the sun icon */
-  transform: translateX(26px); /* Slide to the right when checked (moon) */
+  transform: translateX(26px); 
 }
 
 input:checked + .slider:before {
-  transform: translateX(26px);
+  /* transform: translateX(26px); */
   content: "🌙"; 
   background-color: #fff;
 }
