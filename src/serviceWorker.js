@@ -1,5 +1,7 @@
 // serviceWorker.js
 
+console.log('Service Worker: Registered');
+
 const isLocalhost = process.env.NODE_ENV === 'development';
 
 // This function checks if a service worker can be registered.
