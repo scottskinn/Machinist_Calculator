@@ -28,10 +28,7 @@
 .slider {
   position: absolute;
   cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  left: -25;
   background-color: #fff;
   transition: transform 0.2s, background-color 0.2s;
   transform: translateX(26px);
